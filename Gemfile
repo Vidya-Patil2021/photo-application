@@ -12,6 +12,12 @@ gem 'twitter-bootstrap-rails'
 
 gem 'devise-bootstrap-views'
 
+
+gem 'carrierwave'
+
+gem 'mini_magick'
+
+gem 'fog-aws'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
