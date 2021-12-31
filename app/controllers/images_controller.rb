@@ -8,7 +8,7 @@ class ImagesController < ApplicationController
 
   # GET /images/1 or /images/1.json
   def show
-  
+
   end
 
   # GET /images/new
@@ -24,7 +24,7 @@ class ImagesController < ApplicationController
   # POST /images or /images.json
   def create
     @image = Image.new(image_params)
-      @image.user = current_user
+    @image.user = current_user
 
     respond_to do |format|
       if @image.save
@@ -61,13 +61,13 @@ class ImagesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_image
-      @image = Image.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_image
+    @image = Image.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def image_params
-      params.require(:image).permit(:name, :picture, :user_id)
-    end
+  # Only allow a list of trusted parameters through.
+  def image_params
+    params.require(:image).permit(:name, :picture, :user_id)
+  end
 end
